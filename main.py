@@ -5,7 +5,10 @@ from util import get_limits
 
 
 yellow = [0, 255, 255]  # yellow in BGR colorspace
-cap = cv2.VideoCapture(2)
+
+## here cv2.VideoCapture(CAMERA_INDEX)
+## Generally, for built-in laptop camera it is 0
+cap = cv2.VideoCapture(0)
 while True:
     ret, frame = cap.read()
 
